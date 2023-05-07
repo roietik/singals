@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: 'Calibri', serif;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.offer-button {
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 -1px 10px -2px #6c00e2;
+    font-weight: bold;
+  }
+}

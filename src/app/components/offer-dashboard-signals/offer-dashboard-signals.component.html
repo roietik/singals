@@ -1,0 +1,33 @@
+<div class="main-container">
+  <p>{{title}}</p>
+  <h1>Wybierz swój abonament</h1>
+
+  <div class="offers-container">
+    <app-offer-card *ngFor="let contract of contracts" [contract]="contract" (offerClicked)="offerChanged($event)"></app-offer-card>
+  </div>
+
+  <ng-container *ngIf="activeOffer">
+    <h1>Wybrałeś pakiet: {{activeOffer.header}} za {{basePriceSignal()}} zł</h1>
+    <h2>Dobierz dodatkowe usługi</h2>
+
+    <div class="checkbox-container">
+      <input id="insurance" type="checkbox" (change)="additionalServiceChecked(AdditionalOfferType.INSURANCE, $event)">
+      <label for="insurance">Ubezpieczenie wyswietlacza (9 zł)</label>
+    </div>
+
+    <div class="checkbox-container">
+      <input id="abroad" type="checkbox" (change)="additionalServiceChecked(AdditionalOfferType.ABROAD, $event)">
+      <label for="abroad">Pakiet zagranica (19 zł)</label>
+    </div>
+
+    <div class="checkbox-container">
+      <input id="additional" type="checkbox" (change)="additionalServiceChecked(AdditionalOfferType.SECOND_NUMBER, $event)">
+      <label for="additional">Drugi numer (13 zł)</label>
+    </div>
+
+    <h1>Miesięczny abonament: {{totalPrice()}} zł</h1>
+
+    <button class="offer-button" (click)="saveClicked()">Zapisz</button>
+  </ng-container>
+
+</div>

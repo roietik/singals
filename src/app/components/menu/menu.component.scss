@@ -1,0 +1,10 @@
+.menu-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .menu-item {
+    margin: 20px 15px;
+    cursor: pointer;
+  }
+}

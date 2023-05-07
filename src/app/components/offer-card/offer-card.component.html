@@ -1,0 +1,13 @@
+<div class="card-main-container">
+  <div class="img-container">
+    <img class="card-img" [src]="imgPath" alt="card image">
+  </div>
+
+  <h1 class="card-header" [innerHTML]="header"></h1>
+
+  <div class="card-description" [innerHTML]="description"></div>
+
+  <button class="offer-button" (click)="offerChanged()">
+    Wybierz
+  </button>
+</div>
