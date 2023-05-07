@@ -1,6 +1,10 @@
-# AngularSignals
+# AngularSignals - przykład użycia
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+Do projektu zostały wykorzystane następujące wersje:
+npm 8.19.2
+node v18.12.1
+InteliJ WebStorm 2023.1.1
+Angular 16
 
 ## Development server
 
